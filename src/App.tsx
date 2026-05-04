@@ -61,8 +61,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-[#C5A059] selection:text-white">
       
-      {/* Header */}
-      <header className="h-20 px-6 lg:px-10 flex items-center justify-between border-b border-white/5 bg-[#0a0a0a] relative z-20">
+      {/* Header — fixed: hero/content need offset so nothing sits under the bar */}
+      <header className="fixed top-0 left-0 right-0 z-20 h-20 px-6 lg:px-10 flex items-center justify-between border-b border-white/5 bg-[#0a0a0a]">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-[#C5A059] flex items-center justify-center rounded-sm shrink-0">
             <Hexagon className="w-6 h-6 text-black" fill="currentColor" />
@@ -90,8 +90,8 @@ export default function App() {
         </div>
       </header>
 
-      {/* Block 1: Hero Section */}
-      <section className="relative min-h-[600px] lg:h-[70vh] flex flex-col md:flex-row bg-[#0a0a0a]">
+      {/* Block 1: Hero Section — pt = header (5rem) + air; tighter on lg+ */}
+      <section className="relative min-h-[600px] lg:h-[70vh] flex flex-col md:flex-row bg-[#0a0a0a] max-lg:pt-[calc(5rem+1.25rem)] lg:pt-20">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
