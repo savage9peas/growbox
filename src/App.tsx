@@ -92,18 +92,13 @@ export default function App() {
 
       {/* Block 1: Hero Section — pt = header (5rem) + air; tighter on lg+ */}
       <section className="relative min-h-[600px] max-lg:min-h-[calc(100svh-5rem)] lg:h-[70vh] flex flex-col md:flex-row bg-[#0a0a0a] max-lg:pt-[calc(5rem+1.25rem)] lg:pt-20">
-        {/* Background Image with Overlay */}
-        <div 
+        {/* Background image — без оверлеев и фильтров */}
+        <div
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ 
+          style={{
             backgroundImage: 'url("/images/hero/hero-grand-stone-house.png")',
           }}
-        >
-          <div className="w-full h-full bg-gradient-to-r from-black/70 via-black/50 to-black/15 md:to-transparent"></div>
-          <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center opacity-[0.05] text-white/5 text-9xl font-bold uppercase pointer-events-none hidden lg:flex select-none flex-col">
-            КАМЕННЫЙ КОВЕР
-          </div>
-        </div>
+        />
 
         {/* Hero Text Overlay */}
         <div className="relative z-10 w-full md:w-1/2 p-8 lg:p-12 flex flex-col justify-center max-lg:min-h-[calc(100svh-5rem-1.25rem)]">
