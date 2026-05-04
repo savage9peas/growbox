@@ -96,7 +96,7 @@ export default function App() {
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url("/images/hero/Airbrush-image-extender.jpeg")',
+            backgroundImage: 'url("/images/hero/hero-grand-stone-house.png")',
           }}
         >
           <div className="w-full h-full bg-gradient-to-r from-black/70 via-black/50 to-black/15 md:to-transparent"></div>
