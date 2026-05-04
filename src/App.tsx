@@ -91,7 +91,7 @@ export default function App() {
       </header>
 
       {/* Block 1: Hero Section — pt = header (5rem) + air; tighter on lg+ */}
-      <section className="relative min-h-[600px] lg:h-[70vh] flex flex-col md:flex-row bg-[#0a0a0a] max-lg:pt-[calc(5rem+1.25rem)] lg:pt-20">
+      <section className="relative min-h-[600px] max-lg:min-h-[calc(100svh-5rem)] lg:h-[70vh] flex flex-col md:flex-row bg-[#0a0a0a] max-lg:pt-[calc(5rem+1.25rem)] lg:pt-20">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
@@ -99,14 +99,14 @@ export default function App() {
             backgroundImage: 'url("/images/hero/Airbrush-image-extender.jpeg")',
           }}
         >
-          <div className="w-full h-full bg-gradient-to-r from-black via-black/80 to-black/30 md:to-transparent"></div>
+          <div className="w-full h-full bg-gradient-to-r from-black/70 via-black/50 to-black/15 md:to-transparent"></div>
           <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center opacity-[0.05] text-white/5 text-9xl font-bold uppercase pointer-events-none hidden lg:flex select-none flex-col">
             КАМЕННЫЙ КОВЕР
           </div>
         </div>
 
         {/* Hero Text Overlay */}
-        <div className="relative z-10 w-full md:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+        <div className="relative z-10 w-full md:w-1/2 p-8 lg:p-12 flex flex-col justify-center max-lg:min-h-[calc(100svh-5rem-1.25rem)]">
           <h1 className="text-5xl lg:text-7xl font-light leading-[0.9] mb-4 uppercase">
             КАМЕННЫЙ <br/><span className="text-[#C5A059] font-bold">КОВЕР</span>
           </h1>
@@ -275,9 +275,9 @@ export default function App() {
               { title: 'МЕСТА ДЛЯ ОТДЫХА', text: 'Мангальные зоны и летние кухни', img: '/images/sections/Untitled_An_inviting_outdoor_patio_features_a_fire_pit_e0Z-gPDZ.png' }
             ].map((card, idx) => (
               <div key={idx} className="group relative h-96 overflow-hidden bg-[#151517] border border-white/5 flex flex-col justify-end p-8">
-                <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 z-0" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10"></div>
-                <div className="relative z-20">
+                <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700 z-0" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10"></div>
+                <div className="relative z-20 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                   <div className="text-[10px] uppercase text-[#C5A059] mb-2 font-bold">{card.text}</div>
                   <h3 className="text-2xl font-bold tracking-wider uppercase leading-none">{card.title}</h3>
                 </div>
