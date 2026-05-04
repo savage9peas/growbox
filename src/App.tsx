@@ -99,13 +99,18 @@ export default function App() {
             backgroundImage: 'url("/images/hero/hero-grand-stone-house.png")',
           }}
         />
+        {/* Градиент слева направо: контраст под текстом, справа фото без сплошного затемнения */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-[1] max-md:bg-[linear-gradient(90deg,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.42)_32%,rgba(0,0,0,0.18)_55%,transparent_78%)] md:bg-[linear-gradient(90deg,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.12)_38%,transparent_52%)]"
+        />
 
         {/* Hero Text Overlay */}
         <div className="relative z-10 w-full md:w-1/2 p-8 lg:p-12 flex flex-col justify-center max-lg:min-h-[calc(100svh-5rem-1.25rem)]">
-          <h1 className="text-5xl lg:text-7xl font-light leading-[0.9] mb-4 uppercase">
+          <h1 className="text-5xl lg:text-7xl font-light leading-[0.9] mb-4 uppercase [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]">
             КАМЕННЫЙ <br/><span className="text-[#C5A059] font-bold">КОВЕР</span>
           </h1>
-          <p className="text-white/60 text-sm max-w-sm mb-10 leading-relaxed uppercase">
+          <p className="text-white/60 text-sm max-w-sm mb-10 leading-relaxed uppercase [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]">
             ПРОЧНОЕ И КРАСИВОЕ ПОКРЫТИЕ ДЛЯ ВАШЕГО ЗАГОРОДНОГО ДОМА
           </p>
 
