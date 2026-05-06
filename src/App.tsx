@@ -160,7 +160,13 @@ export default function App() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-3 bg-[#C5A059] text-black font-bold text-xs uppercase tracking-widest hover:bg-[#b08b47] transition-colors rounded-sm">
+            <button
+              onClick={() => {
+                const el = document.getElementById('Этапы');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="px-8 py-3 bg-[#C5A059] text-black font-bold text-xs uppercase tracking-widest hover:bg-[#b08b47] transition-colors rounded-sm"
+            >
               Рассчитать стоимость
             </button>
             <button 
@@ -405,7 +411,7 @@ export default function App() {
       </section>
 
       {/* Split Panels: Workflow & Calculator */}
-      <section className="border-y border-white/5 bg-[#0D0D0E] flex flex-col xl:flex-row">
+      <section className="border-y border-white/5 bg-[#0D0D0E] flex flex-col xl:flex-row" id="Этапы">
         {/* Workflow */}
         <div className="w-full xl:w-1/2 p-8 lg:p-12 xl:p-16 border-b xl:border-b-0 xl:border-r border-white/5">
           <h2 className="text-xs uppercase tracking-[0.3em] text-[#C5A059] mb-12">Как мы работаем</h2>
