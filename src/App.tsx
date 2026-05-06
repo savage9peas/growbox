@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Gem, FileText, CheckCircle, Smartphone, 
-  MapPin, Clock, Star, Hexagon, Phone, CalendarHeart, Droplets, Leaf, 
+  MapPin, Clock, Star, Phone, CalendarHeart, Droplets, Leaf, 
   ShieldCheck, Wrench, Palette, ThumbsUp, Ruler, Wallet, Hammer, Key, X,
   ChevronLeft, ChevronRight
 } from 'lucide-react';
@@ -64,9 +64,11 @@ export default function App() {
       {/* Header — fixed: hero/content need offset so nothing sits under the bar */}
       <header className="fixed top-0 left-0 right-0 z-20 h-20 px-6 lg:px-10 flex items-center justify-between border-b border-white/5 bg-[#0a0a0a]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#C5A059] flex items-center justify-center rounded-sm shrink-0">
-            <Hexagon className="w-6 h-6 text-black" fill="currentColor" />
-          </div>
+          <img
+            src="/images/logo/terraquartz-logo.png"
+            alt="Логотип TerraQuartz"
+            className="w-10 h-10 rounded-sm object-cover shrink-0"
+          />
           <span className="text-xl font-bold tracking-tighter uppercase hidden sm:inline-block">
             Терра<span className="text-[#C5A059]">кварц</span>
           </span>
