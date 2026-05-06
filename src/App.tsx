@@ -26,6 +26,49 @@ export default function App() {
     '/images/gallery/In_a_realistic_style_this_image_showcases_a_NYc6B4ih.png',
     '/images/gallery/The_image_displays_a_modern_architectural_design_U7dITit.png'
   ];
+  
+  const mineralFillers = [
+    {
+      image: '/images/fillers/filler-1-white-marble.png',
+      title: 'Мраморная крошка белая',
+      fraction: 'Размер фракции: 5 - 10мм; 10 - 20мм',
+    },
+    {
+      image: '/images/fillers/filler-2-blue-marble.png',
+      title: 'Мраморная крошка голубая',
+      fraction: 'Размер фракции: 5 - 10мм; 10 - 20мм',
+    },
+    {
+      image: '/images/fillers/filler-3-gray-marble.png',
+      title: 'Мраморная крошка серая',
+      fraction: 'Размер фракции: 10 - 20мм',
+    },
+    {
+      image: '/images/fillers/filler-4-jasper.png',
+      title: 'Крошка из яшмы',
+      fraction: 'Размер фракции: 5 - 10мм',
+    },
+    {
+      image: '/images/fillers/filler-5-black-marble.png',
+      title: 'Мраморная крошка черная',
+      fraction: 'Размер фракции: 10 - 20мм',
+    },
+    {
+      image: '/images/fillers/filler-6-raspberry-quartzite.png',
+      title: 'Крошка, малиновый кварцит',
+      fraction: 'Размер фракции: 10 - 20мм',
+    },
+    {
+      image: '/images/fillers/filler-7-checkerboard-marble.png',
+      title: 'Мраморная крошка "Шахматка"',
+      fraction: 'Размер фракции: 5 - 10мм',
+    },
+    {
+      image: '/images/fillers/filler-8-assorted-tumbled-marble.png',
+      title: 'Мраморная крошка "Ассорти", галтованная',
+      fraction: '',
+    },
+  ];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
@@ -464,6 +507,51 @@ export default function App() {
             </div>
 
           </div>
+        </div>
+      </section>
+      
+      {/* Block 4.5: Mineral Filler Selection */}
+      <section className="py-24 bg-[#0a0a0a] border-b border-white/5">
+        <div className="container mx-auto px-6 lg:px-10 max-w-[1440px]">
+          <h2 className="text-xs uppercase tracking-[0.3em] text-[#C5A059] mb-6">
+            Выбор минерального наполнителя
+          </h2>
+          <div className="text-4xl lg:text-5xl font-light leading-none uppercase mb-12 tracking-tight">
+            ПОДБЕРИТЕ ОПТИМАЛЬНУЮ <br />
+            <span className="font-bold text-[#C5A059]">ФРАКЦИЮ И ТЕКСТУРУ</span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+            {mineralFillers.map((item) => (
+              <article
+                key={item.title}
+                className="bg-[#151517] border border-white/5 p-3 md:p-4 flex flex-col"
+              >
+                <div className="relative w-full aspect-square overflow-hidden border border-white/10 mb-4">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-sm uppercase tracking-wide font-semibold text-white mb-2 min-h-[2.75rem]">
+                  {item.title}
+                </h3>
+                {item.fraction ? (
+                  <p className="text-[11px] text-white/60 uppercase tracking-wide leading-relaxed">
+                    {item.fraction}
+                  </p>
+                ) : (
+                  <div className="h-[1.35rem]" />
+                )}
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-10 text-sm md:text-base text-white/80 uppercase tracking-wider border-l-2 border-[#C5A059] pl-4">
+            Не понравился ни один вариант? Свяжитесь с нами и мы подберем подходящий!
+          </p>
         </div>
       </section>
 
